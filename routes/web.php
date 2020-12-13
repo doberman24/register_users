@@ -19,13 +19,13 @@ Route::get('/user', function () {
 
 Route::post('/register/reg_submit', [RegusersController::class, 'registerSubmit'])->name('register-submit');
 
-//Route::post('/login/log_submit', [RegusersController::class, 'loginSubmit'])->name('login-submit');
 Route::post('/login/log_submit', [RegusersController::class, 'loginSubmit'])->name('login-submit');
 
+Route::post('/register/user/{id}/update', [RegusersController::class, 'upgradeSubmit'])->name('up-user-submit');
 
 
-//Route::get('/register/user/{email}/{pass}', [RegusersController::class, 'registerUser'])->name('register-user');
 Route::get('/register/user/{id}', [RegusersController::class, 'registerUser'])->name('register-user');
 
-//Route::get('/login/user/{email}/{pass}', [RegusersController::class, 'loginUser'])->name('login-user');
+Route::get('/register/user/{id}/update', [RegusersController::class, 'updateUser'])->name('up-user');
 
+Route::get('/register/user/{id}/delete', [RegusersController::class, 'deleteUser'])->name('del-user');
