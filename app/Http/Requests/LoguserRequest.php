@@ -1,5 +1,7 @@
 <?php
 
+//Проверка данных при авторизации пользователя
+
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
@@ -21,6 +23,7 @@ class LoguserRequest extends FormRequest
      *
      * @return array
      */
+    //Проверяем поля на корректность введенных данных при авторизации пользователя
     public function rules()
     {
         return [
@@ -29,6 +32,7 @@ class LoguserRequest extends FormRequest
         ];
     }
 
+    //выводим сообщения в случае не корректно введенных данных при авторизации пользователя
     public function messages()
     {
         return [

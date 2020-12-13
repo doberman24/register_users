@@ -1,5 +1,7 @@
 <?php
 
+//Проверка данных при регистрации и редактировании пользователя
+
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
@@ -21,6 +23,7 @@ class ReguserRequest extends FormRequest
      *
      * @return array
      */
+    //Проверяем поля на корректность введенных данных при регистрации и редактировании пользователя
     public function rules()
     {
         return [
@@ -31,6 +34,7 @@ class ReguserRequest extends FormRequest
         ];
     }
 
+    //выводим сообщения в случае не корректно введенных данных при регистрации и редактировании пользователя
     public function messages()
     {
         return [
